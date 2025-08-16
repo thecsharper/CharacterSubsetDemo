@@ -1,7 +1,7 @@
 ﻿var solution = new Solution();
-string s1 = "epidemiologist";
-string s2 = "refrigeration";
-string s3 = "supercalifragilisticexpialodocious";
+var s1 = "epidemiologist";
+var s2 = "refrigeration";
+var s3 = "supercalifragilisticexpialodocious";
 int result = solution.LongestCommonSubsequenceLength(s1, s2, s3);
 
 Console.WriteLine($"Input strings: \"{s1}\", \"{s2}\", \"{s3}\"");
@@ -17,14 +17,14 @@ public class Solution
 
         int len1 = s1.Length, len2 = s2.Length, len3 = s3.Length;
         // Initialize 3D DP table
-        int[,,] dp = new int[len1 + 1, len2 + 1, len3 + 1];
+        var dp = new int[len1 + 1, len2 + 1, len3 + 1];
 
         // Fill DP table
-        for (int i = 0; i <= len1; i++)
+        for (var i = 0; i <= len1; i++)
         {
             for (int j = 0; j <= len2; j++)
             {
-                for (int k = 0; k <= len3; k++)
+                for (var k = 0; k <= len3; k++)
                 {
                     if (i == 0 || j == 0 || k == 0)
                     {
